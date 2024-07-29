@@ -22,29 +22,26 @@ public class CardDisplay : MonoBehaviour
 
     private void Start()
     {
-        DisplayCardStats();
+        //DisplayCardStats();
     }
 
-    public void DisplayCardStats()
+    public void DisplayCardStats(WarCharacter warCharacter)
     {
-        if(character != null)
-        {
-            if(character.name != null)
-                nameText.text = character.name;
-            if(character.description!=null)
-                descriptionText.text = character.description;
-            if(character.artwork!=null)
-                artworkImage.sprite=character.artwork;
-            if(character.upgradeLevel!=0)
-                upgradeLevetText.text=character.upgradeLevel.ToString();
-            if(character.attack!=0)
-                attackText.text=character.attack.ToString();
-            if(character.health!=0)
-                healthText.text=character.health.ToString();
-            if(character.range!=0)
-                rangeText.text=character.range.ToString();
-            if(character.durabilty!=0)
-                durabilityText.text= character.durabilty.ToString();
-        }
+        if (warCharacter.name != null)
+            nameText.text = warCharacter.name;
+        if (warCharacter.description != null)
+            descriptionText.text = warCharacter.description;
+        if (warCharacter.artwork != null)
+            artworkImage.sprite = warCharacter.artwork;
+        if (warCharacter.upgradeLevel != 0)
+            upgradeLevetText.text ="Lvl:"+ warCharacter.upgradeLevel.ToString();
+        if (warCharacter.attack != 0)
+            attackText.text ="Attack:"+ warCharacter.attack.ToString();
+        if (warCharacter.health != 0)
+            healthText.text = "Health:"+warCharacter.health.ToString();
+        if (warCharacter.range != 0)
+            rangeText.text ="Range:"+ warCharacter.range.ToString();
+        if (warCharacter.durabilty != 0)
+            durabilityText.text = warCharacter.durabilty.ToString();
     }
 }
